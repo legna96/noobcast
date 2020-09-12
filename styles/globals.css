@@ -1,0 +1,52 @@
+:root {
+  /* modal */
+  --z-back:   -10;
+  --z-normal:  1;
+  --z-tooltip: 10;
+  --z-fixed:   100;
+  --z-modal:   1000;
+
+  /* Colores Redes Sociales */
+  --redes-fb-color: #3b5998;
+  --redes-tw-color: #55acee;
+  --redes-yt-color: #bb0000;
+  --redes-wa-color: #4dc247;
+  --redes-insta-color: #BA00BF;
+  --redes-spotify-color: #1ED760;
+
+  /* Paleta de Colores */
+  --color-primario: #158A43;
+  --color-secundario: #103EA1;
+  --color-terciario: #ee6c09;
+  
+
+  /* Colores de Tema */
+  --bg-principal: #202225;
+  --bg-principal-medio: #33363C;
+  --bg-principal-claro: #2F3136;
+  --color-principal: #FFFFDA;
+  --color-principal-claro: #DCDDDE;
+
+  /* Fuentes */
+  --font-roboto: 'Roboto';
+  --font-roboto-alt: sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-principal);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
