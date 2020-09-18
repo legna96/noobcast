@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import MenuTemporada from "./menu-temporada";
+import { UrlPodcast, UrlSeries, UrlHome } from "../../../config/magicstrings"
 
 const Container = styled.nav`
     position: fixed;
@@ -47,9 +48,14 @@ const Container = styled.nav`
     &::-webkit-scrollbar-thumb {
         background-color: var(--bg-principal-claro);
     }
-
 `
 
+const Titulo = styled.p`
+    font-weight: 700;
+    font-size: calc(1em + 2vw);
+    color: var(--color-terciario);
+    margin: 10px auto;
+`
 
 const Menu = ({toogleMenu}) => {
 
@@ -62,63 +68,60 @@ const Menu = ({toogleMenu}) => {
                     </div>
                     <MenuTemporada 
                         src={"https://yt3.ggpht.com/a/AATXAJz8M0acNFxbxC2elTcxnseBqaUzGDApoeQa5tRsmw=s900-c-k-c0xffffffff-no-rj-mo"} 
-                        label={"Localhost"}    
+                        label={"Localhost"}
+                        url={UrlHome}
+                        toogleMenu={toogleMenu}
                     />
-                    <p># Series</p>
+                    <MenuTemporada 
+                        src={"https://yt3.ggpht.com/a/AATXAJz8M0acNFxbxC2elTcxnseBqaUzGDApoeQa5tRsmw=s900-c-k-c0xffffffff-no-rj-mo"} 
+                        label={"Noobcast"}    
+                        url={UrlPodcast}
+                        toogleMenu={toogleMenu}
+                        />
+                    <Titulo># Series</Titulo>
                     <ul>
-                    <MenuTemporada 
-                        src={"https://pbs.twimg.com/profile_images/1303067008297295874/9rf-DcBB_400x400.png"}
-                        label={"temporada 1"}
-                    />
-                    <MenuTemporada 
-                        src={"https://pbs.twimg.com/profile_images/1303067008297295874/9rf-DcBB_400x400.png"}
-                        label={"temporada 2"}
-                    />
-                    <MenuTemporada 
-                        src={"https://pbs.twimg.com/profile_images/1303067008297295874/9rf-DcBB_400x400.png"}
-                        label={"temporada 3"}
-                    />
-                    <MenuTemporada 
-                        src={"https://pbs.twimg.com/profile_images/1303067008297295874/9rf-DcBB_400x400.png"}
-                        label={"temporada 4"}
-                    />
-                    <MenuTemporada 
-                        src={"https://pbs.twimg.com/profile_images/1303067008297295874/9rf-DcBB_400x400.png"}
-                        label={"temporada 5"}
-                    />
-                    <MenuTemporada 
-                        src={"https://pbs.twimg.com/profile_images/1303067008297295874/9rf-DcBB_400x400.png"}
-                        label={"temporada 6"}
-                    />
-                    <MenuTemporada 
-                        src={"https://pbs.twimg.com/profile_images/1303067008297295874/9rf-DcBB_400x400.png"}
-                        label={"temporada 7"}
-                    />
+                        <MenuTemporada 
+                            src={"https://pbs.twimg.com/profile_images/1303067008297295874/9rf-DcBB_400x400.png"}
+                            label={"Temporada 1"}
+                            url={UrlSeries+'/temporada-1'}
+                            toogleMenu={toogleMenu}
+                            />
+                        <MenuTemporada 
+                            src={"https://pbs.twimg.com/profile_images/1303067008297295874/9rf-DcBB_400x400.png"}
+                            label={"Temporada 2"}
+                            url={`${UrlSeries}/temporada-2`}
+                            toogleMenu={toogleMenu}
+                        />
                     </ul>
-                    <p># Categorias</p>
+                    <Titulo># Categorias</Titulo>
                     <ul>
                     <MenuTemporada 
                         src={"https://yt3.ggpht.com/a/AATXAJz8M0acNFxbxC2elTcxnseBqaUzGDApoeQa5tRsmw=s900-c-k-c0xffffffff-no-rj-mo"} 
-                        label={"Videojuegos"}    
+                        label={"Videojuegos"}
+                        url={UrlPodcast} 
                     />
                     <MenuTemporada 
                         src={"https://yt3.ggpht.com/a/AATXAJz8M0acNFxbxC2elTcxnseBqaUzGDApoeQa5tRsmw=s900-c-k-c0xffffffff-no-rj-mo"} 
                         label={"Anime"}    
+                        url={UrlPodcast}
                     />
                     </ul>
-                    <p># Capitulos</p>
+                    <Titulo># Capitulos</Titulo>
                     <ul>
                     <MenuTemporada 
                         src={"https://yt3.ggpht.com/a/AATXAJz8M0acNFxbxC2elTcxnseBqaUzGDApoeQa5tRsmw=s900-c-k-c0xffffffff-no-rj-mo"} 
                         label={"Todos"}    
+                        url={UrlPodcast}
                     />
                     <MenuTemporada 
                         src={"https://yt3.ggpht.com/a/AATXAJz8M0acNFxbxC2elTcxnseBqaUzGDApoeQa5tRsmw=s900-c-k-c0xffffffff-no-rj-mo"} 
-                        label={"Especiales"}    
+                        label={"Especiales"}
+                        url={UrlPodcast}
                     />
                     <MenuTemporada 
                         src={"https://yt3.ggpht.com/a/AATXAJz8M0acNFxbxC2elTcxnseBqaUzGDApoeQa5tRsmw=s900-c-k-c0xffffffff-no-rj-mo"} 
-                        label={"Live"}    
+                        label={"Live"}
+                        url={UrlPodcast}
                     />
                     </ul>
         </Container>

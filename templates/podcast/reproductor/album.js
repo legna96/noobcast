@@ -44,9 +44,9 @@ const Container = styled.div`
 const Album = () => {
     return (
         <Container>
-            <img className="portada" src="https://punkeando.com.mx/wp-content/uploads/2020/01/tim-2.jpg" />
+            <img className="portada" src="https://www.fea-evora.com.pt/wp-content/uploads/2016/01/guitarra-acustica-tocando.jpg" />
             <div className="descripcion">
-                <p className="titulo">I wanna Riot lore4I wanna Riot lore4I wanna Riot lore4</p>
+                <p className="titulo">T1E3 - Un noob aprendiendo guitarra</p>
                 <p className="artista">Rancid</p>
             </div>
         </Container>

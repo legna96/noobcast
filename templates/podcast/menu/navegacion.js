@@ -1,5 +1,6 @@
 import styled from '@emotion/styled';
 import NavTemporada from "./nav-temporada";
+import { UrlHome, UrlPodcast, UrlSeries } from '../../../config/magicstrings';
 
 const Nav = styled.nav`
     position: fixed;
@@ -12,6 +13,7 @@ const Nav = styled.nav`
     background-color: var(--bg-principal);
     width: 55px;
     transition: left .5s ease-in-out;
+    text-align: center;
 
     &.is-active {
         left: -55px;
@@ -59,11 +61,11 @@ const Navegacion = ({toogleMenu}) => {
                             <i className="fas fa-bars"></i>
                         </span>
                     </div>
-                        <NavTemporada />
                     <ul>
-                        <NavTemporada />
-                        <NavTemporada />
-                        <NavTemporada />
+                        <NavTemporada src={"https://yt3.ggpht.com/a/AATXAJz8M0acNFxbxC2elTcxnseBqaUzGDApoeQa5tRsmw=s900-c-k-c0xffffffff-no-rj-mo"} url={UrlHome}/>
+                        <NavTemporada src={"https://yt3.ggpht.com/a/AATXAJz8M0acNFxbxC2elTcxnseBqaUzGDApoeQa5tRsmw=s900-c-k-c0xffffffff-no-rj-mo"} url={UrlPodcast}/>
+                        <NavTemporada src={"https://pbs.twimg.com/profile_images/1303067008297295874/9rf-DcBB_400x400.png"} url={`${UrlSeries}/temporada-1`}/>
+                        <NavTemporada src={"https://pbs.twimg.com/profile_images/1303067008297295874/9rf-DcBB_400x400.png"} url={`${UrlSeries}/temporada-2`}/>
                     </ul>
         </Nav>
     )
