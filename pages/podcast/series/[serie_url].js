@@ -4,7 +4,7 @@ import * as UtilsFechas from '../../../utils/fechas';
 
 const series = [
     {
-        path_url: "temporada-1",
+        serie_url: "temporada-1",
         title: "Temporada 1",
         coverpage: "https://i.pinimg.com/736x/6f/9f/fe/6f9ffe12e99075ce20e3493cc18ad761.jpg",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -12,7 +12,7 @@ const series = [
         created_at: "2020-09-08 20:55:19.055744"
     },
     {
-        path_url: "temporada-2",
+        serie_url: "temporada-2",
         title: "Temporada 2",
         coverpage: "https://i.pinimg.com/originals/e5/42/85/e54285c53d47a8720f81a658760292fe.jpg",
         description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -187,7 +187,7 @@ export async function getStaticPaths() {
     const paths = series.map((serie) => {
         return {
             params: { 
-                path_url: serie.path_url
+                serie_url: serie.serie_url
             },
         }
     })
@@ -197,8 +197,7 @@ export async function getStaticPaths() {
   
 export async function getStaticProps({ params }) {
 
-    const serie = series.filter(serie => serie.path_url === params.path_url)[0];
-
+    const serie = series.filter(serie => serie.serie_url === params.serie_url)[0];
     return { props: { serie } }
 }
 

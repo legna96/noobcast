@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import MenuTemporada from "./menu-temporada";
-import { UrlPodcast, UrlSeries, UrlHome } from "../../../config/magicstrings"
+import { UrlPodcast, UrlHome } from "../../../config/magicstrings"
 
 const Container = styled.nav`
     position: fixed;
@@ -83,13 +83,13 @@ const Menu = ({toogleMenu}) => {
                         <MenuTemporada 
                             src={"https://pbs.twimg.com/profile_images/1303067008297295874/9rf-DcBB_400x400.png"}
                             label={"Temporada 1"}
-                            url={UrlSeries+'/temporada-1'}
+                            url={`${UrlPodcast}/series/temporada-1`}
                             toogleMenu={toogleMenu}
                             />
                         <MenuTemporada 
                             src={"https://pbs.twimg.com/profile_images/1303067008297295874/9rf-DcBB_400x400.png"}
                             label={"Temporada 2"}
-                            url={`${UrlSeries}/temporada-2`}
+                            url={`${UrlPodcast}/series/temporada-2`}
                             toogleMenu={toogleMenu}
                         />
                     </ul>
@@ -98,12 +98,14 @@ const Menu = ({toogleMenu}) => {
                     <MenuTemporada 
                         src={"https://yt3.ggpht.com/a/AATXAJz8M0acNFxbxC2elTcxnseBqaUzGDApoeQa5tRsmw=s900-c-k-c0xffffffff-no-rj-mo"} 
                         label={"Videojuegos"}
-                        url={UrlPodcast} 
-                    />
+                        url={`${UrlPodcast}/categorias/videojuegos`}
+                        toogleMenu={toogleMenu}
+                        />
                     <MenuTemporada 
                         src={"https://yt3.ggpht.com/a/AATXAJz8M0acNFxbxC2elTcxnseBqaUzGDApoeQa5tRsmw=s900-c-k-c0xffffffff-no-rj-mo"} 
                         label={"Anime"}    
-                        url={UrlPodcast}
+                        url={`${UrlPodcast}/categorias/anime`}
+                        toogleMenu={toogleMenu}
                     />
                     </ul>
                     <Titulo># Capitulos</Titulo>
