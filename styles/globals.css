@@ -9,15 +9,16 @@
   /* Colores Redes Sociales */
   --redes-fb-color: #3b5998;
   --redes-tw-color: #55acee;
+  --redes-twitch-color: purple;
   --redes-yt-color: #bb0000;
   --redes-wa-color: #4dc247;
   --redes-insta-color: #BA00BF;
   --redes-spotify-color: #1ED760;
 
   /* Paleta de Colores */
-  --color-primario: #158A43;
-  --color-secundario: #103EA1;
-  --color-terciario: #ee6c09;
+  --color-primario: yellow;
+  --color-secundario: #ee6c09;
+  --color-terciario: #158A43;
   
 
   /* Colores de Tema */
@@ -30,6 +31,9 @@
   /* Fuentes */
   --font-roboto: 'Roboto';
   --font-roboto-alt: sans-serif;
+
+  --font-logo: 'Press Start 2P';
+  --font-log-alt: cursive;
 }
 
 * {
@@ -40,6 +44,7 @@
 
 body {
   background: var(--bg-principal);
+  overflow-x: hidden;
 }
 
 a {
@@ -49,4 +54,29 @@ a {
 
 img {
   width: 100%;
+  height: 100%;
+}
+
+.fb-color {
+  color: var(--redes-fb-color);
+}
+
+.twitch-color {
+  color: var(--redes-twitch-color);
+}
+
+.insta-color {
+  color: var(--redes-insta-color);
+}
+
+.wa-color {
+  color: var(--redes-wa-color);
+}
+
+.spotify-color {
+  color: var(--redes-spotify-color);
+}
+
+.yt-color {
+  color: var(--redes-yt-color);
 }

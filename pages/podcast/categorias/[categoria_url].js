@@ -25,7 +25,7 @@ const Titulo = styled.h2`
 
 const Search = styled.input`
     width: 90%;
-    border-radius 5px;
+    border-radius: 5px;
     padding: 5px;
     display: block;
     margin: 5px auto;
@@ -56,7 +56,7 @@ const Capitulo = styled.div`
     &:hover {
         .overlay {
             height: 100%;
-            display: flex:
+            display: flex;
             align-items: center;
             color: var(--color-terciario);
 
